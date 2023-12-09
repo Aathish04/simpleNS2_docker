@@ -1,0 +1,11 @@
+services:
+  ns2:
+    image: ekiourk/ns2:latest
+    environment:
+      - DISPLAY=host.docker.internal:0
+    volumes:
+      - ./programs:/ns2/programs
+    working_dir: /ns2/programs
+    stdin_open: true 
+    tty: true
+    command: /bin/bash
