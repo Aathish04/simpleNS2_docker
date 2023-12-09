@@ -11,6 +11,7 @@ This repository provides a small docker `compose.yml` file to easily run NS2 TCL
 2) Move into this directory.
 3) Place your `.tcl` programs inside the `programs` folder. This folder will be `bind-mount`ed into the docker container for ns2 as the `/ns2/programs` folder.
 4) Run `docker compose run --rm ns2`
+    
     The `--rm` is important. Without it, docker will create a new container each time you run the command and ultimately take up way too much hard-drive space.
 
     You will be dropped into a root `bash` shell where the current working directory is `/ns2/programs`. You should be able to see all the programs that you placed in the `programs` folder on the host machine here.
